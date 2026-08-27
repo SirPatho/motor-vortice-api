@@ -50,4 +50,5 @@ app.MapPost("/extraer-equipo", async (HttpRequest request) => {
     return Results.Ok(sb.ToString().Trim());
 });
 
-app.Run("http://localhost:5000");
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+app.Run($"http://+:{port}");
