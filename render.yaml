@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: motor-vortice-api
+    env: dotnet
+    buildCommand: dotnet publish -c Release -o out
+    startCommand: dotnet out/MotorVortice.dll
